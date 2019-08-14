@@ -4,9 +4,11 @@ import cv2
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to input image.")
-ap.add_argument("-t", "--threshold", type=float, default=100.0, help="Focus measures falling below the threshold is considered blurry. ")
+ap.add_argument("-t", "--threshold", type=float, default=100.0, 
+		help="Focus measures falling below the threshold is considered blurry. ")
 ap.add_argument("-d", "--display", type=str, default=0, 
-    help="Show image with label on top. 1 to get a visual represntation and 0 to avoid visualization.")
+		help="Show image with label on top. \
+		1 to get a visual represntation and 0 to avoid visualization.")
 args = vars(ap.parse_args())
 
 def detect_blurness(img_path, show_=0):
@@ -15,7 +17,7 @@ def detect_blurness(img_path, show_=0):
 	Output : Tuple 
 		First item string - either 'Not Blurred' or 'Blurred'
 		Second item - variance of laplacian
-	Compute the laplacian(variance) of the image and the focus of measure (the variance of laplacian).
+	Compute the variance and the focus of measure (the variance of laplacian).
 	"""
 
 	img = cv2.imread(img_path, 0)
