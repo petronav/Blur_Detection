@@ -5,3 +5,5 @@
 ### Run instructions
 
 Run as `python blur_det_hwl_2.py -i sample/image/path`.
+
+**Tested in Python 3.6.8 on Ubuntu 18.04 LTS**
