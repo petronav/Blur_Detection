@@ -1,4 +1,4 @@
-numpy==1.17.0
+numpy==1.22.0
 PyWavelets==1.0.3
 opencv_python==4.1.0.25
 pywt==1.0.6
